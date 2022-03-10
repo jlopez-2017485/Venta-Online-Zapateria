@@ -1,0 +1,714 @@
+{
+	"info": {
+		"_postman_id": "5192632c-2763-4d59-8e1d-d412d63524b5",
+		"name": "Venta Online",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "Registrar usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Carlos",
+									"type": "default"
+								},
+								{
+									"key": "surname",
+									"value": "Perez",
+									"type": "default"
+								},
+								{
+									"key": "username",
+									"value": "pcarlos11",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "pcarlos@gmail.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "111",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3200/user/register",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registrar con cuenta Admin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "",
+									"type": "default"
+								},
+								{
+									"key": "surname",
+									"value": "",
+									"type": "default"
+								},
+								{
+									"key": "username",
+									"value": "",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "default"
+								},
+								{
+									"key": "role",
+									"value": "",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3200/user/registerAdmin",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"user",
+								"registerAdmin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "pcarlos11",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "111",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3200/user/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "",
+									"type": "default"
+								},
+								{
+									"key": "surname",
+									"value": "",
+									"type": "default"
+								},
+								{
+									"key": "username",
+									"value": "",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3200/user/update/",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"user",
+								"update",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:3200/user/delete/",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"user",
+								"delete",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Producto",
+			"item": [
+				{
+					"name": "save",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MjI2YjdkNzQ3ZTRhOGViZTFiODg2MTUiLCJuYW1lIjoiSm9zZSIsInN1cm5hbWUiOiJMb3BleiIsInVzZXJuYW1lIjoiSmxvcGV6MTciLCJlbWFpbCI6Impvc2Vsb3BlejE3QGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY0Njg5NTEzMywiZXhwIjoxNjQ2ODk4NzMzfQ.6Lac_jyQp1y_IjlI86e8qj-n7kaTldZfYSS1ZR0oeGA",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Jordan XI",
+									"type": "default"
+								},
+								{
+									"key": "precio",
+									"value": "1000",
+									"type": "default"
+								},
+								{
+									"key": "stock",
+									"value": "20",
+									"type": "default"
+								},
+								{
+									"key": "category",
+									"value": "6229a026737ec0c171d7001e",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3200/product/saveProduct",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"product",
+								"saveProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MjI2YjdkNzQ3ZTRhOGViZTFiODg2MTUiLCJuYW1lIjoiSm9zZSIsInN1cm5hbWUiOiJMb3BleiIsInVzZXJuYW1lIjoiSmxvcGV6MTciLCJlbWFpbCI6Impvc2Vsb3BlejE3QGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY0Njg2NDcxMywiZXhwIjoxNjQ2ODY4MzEzfQ.2fWSkFUgzxP0265gLlTOlRzqpPRvzO2_Xo3BW-Ue2i4",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:3200/product/searchProducts",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"product",
+								"searchProducts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MjI2YjdkNzQ3ZTRhOGViZTFiODg2MTUiLCJuYW1lIjoiSm9zZSIsInN1cm5hbWUiOiJMb3BleiIsInVzZXJuYW1lIjoiSmxvcGV6MTciLCJlbWFpbCI6Impvc2Vsb3BlejE3QGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY0NjgwMzU3MiwiZXhwIjoxNjQ2ODA3MTcyfQ.sTkTSq1rx6_cG_8iUx-2vKVGcxbpaAzg7G4tXHJ5wqk",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Jordan ",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3200/product/searchProduct",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"product",
+								"searchProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update ",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MjI2YjdkNzQ3ZTRhOGViZTFiODg2MTUiLCJuYW1lIjoiSm9zZSIsInN1cm5hbWUiOiJMb3BleiIsInVzZXJuYW1lIjoiSmxvcGV6MTciLCJlbWFpbCI6Impvc2Vsb3BlejE3QGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY0NjgxMjk4NiwiZXhwIjoxNjQ2ODE2NTg2fQ.kWc4sDy3chKMwCT3XF_-9I6xnW1YslygwmqcWCu_DrA",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Jordan XI",
+									"type": "default"
+								},
+								{
+									"key": "precio",
+									"value": "5000",
+									"type": "default"
+								},
+								{
+									"key": "stock",
+									"value": "5",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3200/product/updateProduct/62280cec01d8bddd841dbc28",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"product",
+								"updateProduct",
+								"62280cec01d8bddd841dbc28"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MjI2YjdkNzQ3ZTRhOGViZTFiODg2MTUiLCJuYW1lIjoiSm9zZSIsInN1cm5hbWUiOiJMb3BleiIsInVzZXJuYW1lIjoiSmxvcGV6MTciLCJlbWFpbCI6Impvc2Vsb3BlejE3QGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY0NjgwMzU3MiwiZXhwIjoxNjQ2ODA3MTcyfQ.sTkTSq1rx6_cG_8iUx-2vKVGcxbpaAzg7G4tXHJ5wqk",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:3200/product/deleteProduct/6228218201d8bddd841dbc2b",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"product",
+								"deleteProduct",
+								"6228218201d8bddd841dbc2b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categoria",
+			"item": [
+				{
+					"name": "save",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MjI2YjdkNzQ3ZTRhOGViZTFiODg2MTUiLCJuYW1lIjoiSm9zZSIsInN1cm5hbWUiOiJMb3BleiIsInVzZXJuYW1lIjoiSmxvcGV6MTciLCJlbWFpbCI6Impvc2Vsb3BlejE3QGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY0Njg5NTEzMywiZXhwIjoxNjQ2ODk4NzMzfQ.6Lac_jyQp1y_IjlI86e8qj-n7kaTldZfYSS1ZR0oeGA",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Sneakers",
+									"type": "default"
+								},
+								{
+									"key": "product",
+									"value": "6228dcba7ad5aae9fdd3a3d6",
+									"type": "default",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3200/category/saveCategory",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"category",
+								"saveCategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MjI2YjdkNzQ3ZTRhOGViZTFiODg2MTUiLCJuYW1lIjoiSm9zZSIsInN1cm5hbWUiOiJMb3BleiIsInVzZXJuYW1lIjoiSmxvcGV6MTciLCJlbWFpbCI6Impvc2Vsb3BlejE3QGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY0NjgxMTI1NCwiZXhwIjoxNjQ2ODE0ODU0fQ.uq3tzMN1H6ZaZFMOrC77XpApsHc7xvRaKcAOip0MywQ",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Sneackers",
+									"type": "default"
+								},
+								{
+									"key": "product",
+									"value": "62280cec01d8bddd841dbc28",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3200/category/getCategories",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"category",
+								"getCategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MjI2YjdkNzQ3ZTRhOGViZTFiODg2MTUiLCJuYW1lIjoiSm9zZSIsInN1cm5hbWUiOiJMb3BleiIsInVzZXJuYW1lIjoiSmxvcGV6MTciLCJlbWFpbCI6Impvc2Vsb3BlejE3QGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY0NjgxMTI1NCwiZXhwIjoxNjQ2ODE0ODU0fQ.uq3tzMN1H6ZaZFMOrC77XpApsHc7xvRaKcAOip0MywQ",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Sneackers",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3200/category/searchCategory",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"category",
+								"searchCategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MjI2YjdkNzQ3ZTRhOGViZTFiODg2MTUiLCJuYW1lIjoiSm9zZSIsInN1cm5hbWUiOiJMb3BleiIsInVzZXJuYW1lIjoiSmxvcGV6MTciLCJlbWFpbCI6Impvc2Vsb3BlejE3QGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY0NjgxMjk4NiwiZXhwIjoxNjQ2ODE2NTg2fQ.kWc4sDy3chKMwCT3XF_-9I6xnW1YslygwmqcWCu_DrA",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Sneakers",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3200/category/updateCategory/6228514df842571290e1e5ce",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"category",
+								"updateCategory",
+								"6228514df842571290e1e5ce"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MjI2YjdkNzQ3ZTRhOGViZTFiODg2MTUiLCJuYW1lIjoiSm9zZSIsInN1cm5hbWUiOiJMb3BleiIsInVzZXJuYW1lIjoiSmxvcGV6MTciLCJlbWFpbCI6Impvc2Vsb3BlejE3QGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY0Njg2NDcxMywiZXhwIjoxNjQ2ODY4MzEzfQ.2fWSkFUgzxP0265gLlTOlRzqpPRvzO2_Xo3BW-Ue2i4",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:3200/category/deleteCategory/622929996e6d7cd8e29fd6ed",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"category",
+								"deleteCategory",
+								"622929996e6d7cd8e29fd6ed"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CarShop",
+			"item": [
+				{
+					"name": "save",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MjI5OWZhZDczN2VjMGMxNzFkNzAwMTgiLCJuYW1lIjoiQ2FybG9zIiwic3VybmFtZSI6IlBlcmV6IiwidXNlcm5hbWUiOiJwY2FybG9zMTEiLCJlbWFpbCI6InBjYXJsb3NAZ21haWwuY29tIiwicm9sZSI6IkNMSUVOVEUiLCJpYXQiOjE2NDY4OTUyNjMsImV4cCI6MTY0Njg5ODg2M30.J04QtR7h-5dSJpELDRzdwaatEw-2UgK-Xdm-qgpijLU",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "product",
+									"value": "6229a04c737ec0c171d70020",
+									"type": "default"
+								},
+								{
+									"key": "quantity",
+									"value": "18",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3200/carShop/saveCarShop",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"carShop",
+								"saveCarShop"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Factura",
+			"item": [
+				{
+					"name": "save buys",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MjI5OWZhZDczN2VjMGMxNzFkNzAwMTgiLCJuYW1lIjoiQ2FybG9zIiwic3VybmFtZSI6IlBlcmV6IiwidXNlcm5hbWUiOiJwY2FybG9zMTEiLCJlbWFpbCI6InBjYXJsb3NAZ21haWwuY29tIiwicm9sZSI6IkNMSUVOVEUiLCJpYXQiOjE2NDY4OTUyNjMsImV4cCI6MTY0Njg5ODg2M30.J04QtR7h-5dSJpELDRzdwaatEw-2UgK-Xdm-qgpijLU",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:3200/facture/saveBuy",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"facture",
+								"saveBuy"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
